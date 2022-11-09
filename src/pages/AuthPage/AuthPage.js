@@ -1,6 +1,6 @@
 import { useState } from "react";
-import SignUpForm from "../components/SignUpForm/SignUpForm";
-import LoginForm from "../components/LoginForm";
+import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import LoginForm from "../../components/LoginForm";
 
 
 const Auth = ({setUser}) => {
