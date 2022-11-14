@@ -9,6 +9,14 @@ export async function signUp(userData) {
     localStorage.setItem('token', token);
     return getUser();
 }
+
+export async function login(credentials){
+    const token = await usersAPI.login(credentials);
+    // Persist the token to localStorage
+    localStorage.setItem('token', token);
+    return getUser();
+}
+
 export function getToken() {
     // getItem returns null if there's no string
     const token = localStorage.getItem('token');
@@ -29,9 +37,7 @@ export function getUser() {
     // If there's a token, return the user in the payload, otherwise return null
     return token ? JSON.parse(atob(token.split('.')[1])).user : null;
 }
-export async function logIn(){
 
-}
-export async function logOut(){
+export function logOut(){
     localStorage.removeItem('token');
 }
