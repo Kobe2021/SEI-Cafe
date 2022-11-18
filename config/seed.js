@@ -1,5 +1,5 @@
 require('dotenv').config();
-require('./database');
+require('./db');
 
 const Category = require('../models/category');
 const Item = require('../models/item');
